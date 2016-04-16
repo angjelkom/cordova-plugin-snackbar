@@ -33,10 +33,11 @@ NOTE: You must wait for the `deviceready` event.
 
 - Add the plugin:
 
+    ```
     cordova plugin add cordova-plugin-snackbar
 
     phonegap plugin add cordova-plugin-snackbar
-
+    ```
 
 - Change the Main Activity theme to AppCompact:
 
