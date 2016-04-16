@@ -40,9 +40,9 @@ NOTE: You must wait for the `deviceready` event.
 
 - Change the Main Activity theme to AppCompact:
 
-#####Before:
+####Before:
 
-#android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+#####android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
 
   <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
       <intent-filter android:label="@string/launcher_name">
@@ -52,9 +52,9 @@ NOTE: You must wait for the `deviceready` event.
   </activity>
 
 
-#After
+####After:
 
-#android:theme="@style/Theme.AppCompat.NoActionBar"
+#####android:theme="@style/Theme.AppCompat.NoActionBar"
 
 <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:windowSoftInputMode="adjustResize">
     <intent-filter android:label="@string/launcher_name">
