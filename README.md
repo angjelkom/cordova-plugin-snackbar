@@ -40,7 +40,7 @@ NOTE: You must wait for the `deviceready` event.
 
 - Change the Main Activity theme to AppCompact:
 
-#Before:
+#####Before:
 
 #android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
 
