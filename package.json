@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-snackbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cordova Material Snackbar Plugin",
   "cordova": {
     "id": "cordova-plugin-snackbar",
