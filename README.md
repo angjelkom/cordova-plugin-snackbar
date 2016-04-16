@@ -44,24 +44,27 @@ NOTE: You must wait for the `deviceready` event.
 
 #####android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
 
+```
   <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
       <intent-filter android:label="@string/launcher_name">
           <action android:name="android.intent.action.MAIN" />
           <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
   </activity>
-
+```
 
 ####After:
 
 #####android:theme="@style/Theme.AppCompat.NoActionBar"
 
+```
 <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:windowSoftInputMode="adjustResize">
     <intent-filter android:label="@string/launcher_name">
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 </activity>
+```
 
 ## Usage
 
