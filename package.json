@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-snackbar",
+  "version": "1.0.0",
+  "description": "Cordova Material Snackbar Plugin",
+  "cordova": {
+    "id": "cordova-plugin-snackbar",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/echonox/cordova-plugin-snackbar"
+  },
+  "keywords": [
+    "cordova",
+    "snackbar",
+    "material",
+    "material design",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.0-dev"
+    }
+  ],
+  "author": "Apache Software Foundation",
+  "license": "Apache 2.0"
+}
