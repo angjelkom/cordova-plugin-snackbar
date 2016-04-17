@@ -21,6 +21,11 @@
 
 # cordova-plugin-snackbar
 
+
+##MAJOR UPDATE Version 2.0.2:
+
+Two new features added: "INDEFINITE" duration and Action Button, Api slightly changed please check the new Api below.
+
 This is a cordova plugin which allows you to display a Material Design Snackbar
 NOTE: You must wait for the `deviceready` event.
 
@@ -69,26 +74,26 @@ NOTE: You must wait for the `deviceready` event.
 
 ## Usage
 
-    cordova.plugins.snackbar(text, duration, success, error);
+    cordova.plugins.snackbar(text, duration, button, callback);
 
-    success - Success callback function, which returns OK String.
+    text // String text for the Snackbar
 
-    error - Error callback function, which returns Error String
+    duration  //How long to show the Snackbar
+    parameters: "SHORT", "LONG" and "INDEFINITE" (default, show snackbar until it's dismissed by clicking the action button)
 
-    text - //String text for the Snackbar
+    button - String text for the Action Button
 
-    duration - params "SHORT" (default), "LONG" //How long to show the Snackbar
+    callback - Callback function for the Action Button.
 
 ## Example
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-        cordova.plugins.snackbar('This is a long snackbar text', 'LONG', function(success){
-          console.log(success);
-          }, function(error){
-              console.log(error);
-            });
+        cordova.plugins.snackbar('This is a indefinite snackbar text', 'INDEFINITE', "Dismiss", function(){
+          console.log('Dismiss Button Clicked');
+        });
     }
+
 
 ### Supported Platforms
 
