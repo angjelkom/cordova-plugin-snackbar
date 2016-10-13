@@ -22,17 +22,9 @@
 # cordova-plugin-snackbar
 
 
-##MAJOR UPDATE Version 2.0.2:
+##MAJOR UPDATE Version 2.1.2:
 
-Two new features added: "INDEFINITE" duration and Action Button, Api slightly changed please check the new Api below.
-
-This is a cordova plugin which allows you to display a Material Design Snackbar
-NOTE: You must wait for the `deviceready` event.
-
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-      // plugin code goes inside deviceready callback
-    }
+This Update removes the need to manually modify the AndroidManifest.xml file to modify the App theme, the plugin will do that for you.
 
 ## Installation
 
@@ -43,34 +35,6 @@ NOTE: You must wait for the `deviceready` event.
 
     phonegap plugin add cordova-plugin-snackbar
     ```
-
-- Change the Main Activity theme to AppCompact:
-
-####Before:
-
-#####android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
-
-```
-  <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
-      <intent-filter android:label="@string/launcher_name">
-          <action android:name="android.intent.action.MAIN" />
-          <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-  </activity>
-```
-
-####After:
-
-#####android:theme="@style/Theme.AppCompat.NoActionBar"
-
-```
-<activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:windowSoftInputMode="adjustResize">
-    <intent-filter android:label="@string/launcher_name">
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-</activity>
-```
 
 ## Usage
 
