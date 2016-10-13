@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="cordova-plugin-snackbar"
-        version="2.0.2">
+        version="2.1.2">
     <name>Snackbar</name>
     <description>Cordova Plugin that displays Material Design Snackbar</description>
     <license>MIT</license>
