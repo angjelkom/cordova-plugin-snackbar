@@ -22,11 +22,11 @@
 # cordova-plugin-snackbar
 
 
-##MAJOR UPDATE Version 2.1.2:
+##MAJOR UPDATE Version 2.1.4:
 
 This Update removes the need to manually modify the AndroidManifest.xml file to modify the App theme, the plugin will do that for you.
 
-NOTE: You need to have Cordova Android Platform v5.2.2 or higher
+NOTE: You need to have Cordova 6.3.1 or higher to be able to do the modification automatically
 
 ## Installation
 
@@ -38,7 +38,7 @@ NOTE: You need to have Cordova Android Platform v5.2.2 or higher
     phonegap plugin add cordova-plugin-snackbar
     ```
 
-- Change the Main Activity theme to AppCompact (ONLY for users that use older version of Cordova Android v5.2.2):
+- Change the Main Activity theme to AppCompact (ONLY for users that use version older than Cordova 6.3.1):
 
 ####Before:
 
