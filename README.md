@@ -21,16 +21,18 @@
 
 # cordova-plugin-snackbar
 
-##Changelog 2.2.0:
+## Changelog 2.2.0:
 
 - Added Ability to close the snackbar manually
 
 NOTE:
-    Use ```cordova.plugins.snackbar.create(text, duration, button, callback);``` instead of the previous ```cordova.plugin.snackbar(text, duration, button, callback);```
-    Use ```cordova.plugins.snackbar.close(callback);``` to close the snackbar
+
+Use ```cordova.plugins.snackbar.create(text, duration, button, callback);``` instead of the previous ```cordova.plugin.snackbar(text, duration, button, callback);```
+
+Use ```cordova.plugins.snackbar.close(callback);``` to close the snackbar
 
 
-##MAJOR UPDATE Version 2.1.4:
+### MAJOR UPDATE Version 2.1.4:
 
 This Update removes the need to manually modify the AndroidManifest.xml file to modify the App theme, the plugin will do that for you.
 
@@ -48,9 +50,9 @@ NOTE: You need to have Cordova 6.3.1 or higher to be able to do the modification
 
 - Change the Main Activity theme to AppCompact (ONLY for users that use version older than Cordova 6.3.1):
 
-####Before:
+#### Before:
 
-#####android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+##### android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
 
 ```
   <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
@@ -61,9 +63,9 @@ NOTE: You need to have Cordova 6.3.1 or higher to be able to do the modification
   </activity>
 ```
 
-####After:
+#### After:
 
-#####android:theme="@style/Theme.AppCompat.NoActionBar"
+##### android:theme="@style/Theme.AppCompat.NoActionBar"
 
 ```
 <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:windowSoftInputMode="adjustResize">
