@@ -21,6 +21,14 @@
 
 # cordova-plugin-snackbar
 
+##Changelog 2.2.0:
+
+- Added Ability to close the snackbar manually
+
+NOTE:
+    Use ```cordova.plugins.snackbar.create(text, duration, button, callback);``` instead of the previous ```cordova.plugin.snackbar(text, duration, button, callback);```
+    Use ```cordova.plugins.snackbar.close(callback);``` to close the snackbar
+
 
 ##MAJOR UPDATE Version 2.1.4:
 
@@ -68,7 +76,9 @@ NOTE: You need to have Cordova 6.3.1 or higher to be able to do the modification
 
 ## Usage
 
-    cordova.plugins.snackbar(text, duration, button, callback);
+    //Creates one snackbar at time;
+
+    cordova.plugins.snackbar.create(text, duration, button, callback);
 
     text // String text for the Snackbar
 
@@ -79,12 +89,24 @@ NOTE: You need to have Cordova 6.3.1 or higher to be able to do the modification
 
     callback - Callback function for the Action Button.
 
+
+    //Close snackbar programatically
+
+    cordova.plugins.snackbar.close(callback);
+
+    callback - Success Callback function when the snackbar closes.
+
 ## Example
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-        cordova.plugins.snackbar('This is a indefinite snackbar text', 'INDEFINITE', "Dismiss", function(){
-          console.log('Dismiss Button Clicked');
+        cordova.plugins.snackbar.create('This is a indefinite snackbar text', 'INDEFINITE', "Dismiss", function(){
+          console.log('Dismiss Button Clicked!');
+        });
+
+
+        cordova.plugins.snackbar.close(function(){
+          console.log('Snackbar Closed Programmatically!');
         });
     }
 
