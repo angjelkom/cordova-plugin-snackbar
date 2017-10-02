@@ -1,6 +1,6 @@
-var snackbar = function(text, duration, button, successCallback){
-
-    cordova.exec(
+var snackbar = {
+    create: function (text, duration, button, successCallback) {
+        cordova.exec(
             successCallback, // success callback function
             null, // error callback function
             'MaterialSnackbar', // mapped to our native Java class called "CalendarPlugin"
@@ -8,8 +8,18 @@ var snackbar = function(text, duration, button, successCallback){
             [{                  // and this array of custom arguments to create our entry
                 "text": text,
                 "duration": duration,
-                "button": button
+                "button": button || null
             }]
         );
+    },
+
+    close: function (successCallback) {
+        cordova.exec(
+            successCallback, // success callback function
+            null, // error callback function
+            'MaterialSnackbar', // mapped to our native Java class called "CalendarPlugin"
+            'closeMaterialSnackbar'
+        );
+    }
 }
 module.exports = snackbar;

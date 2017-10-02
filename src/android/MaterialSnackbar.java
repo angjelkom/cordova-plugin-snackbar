@@ -13,7 +13,8 @@ import android.view.View;
 
 public class MaterialSnackbar extends CordovaPlugin {
 
-  FrameLayout layout;
+    private FrameLayout layout;
+    private Snackbar snackbar;
 
   @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
@@ -24,6 +25,10 @@ public class MaterialSnackbar extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         try {
             if ("materialSnackbar".equals(action)) {
+
+                if(snackbar != null){
+                    snackbar.dismiss();
+                }
 
                 JSONObject arg_object = args.getJSONObject(0);
 
@@ -36,7 +41,7 @@ public class MaterialSnackbar extends CordovaPlugin {
                 cordova.getActivity().runOnUiThread(new Runnable() {
                     public void run() {
 
-                        final Snackbar snackbar = Snackbar
+                        snackbar = Snackbar
                         .make(layout, text, Snackbar.LENGTH_INDEFINITE);
 
                         if(duration.equals("SHORT")){
@@ -47,7 +52,7 @@ public class MaterialSnackbar extends CordovaPlugin {
                           snackbar.setDuration(Snackbar.LENGTH_INDEFINITE);
                         }
 
-                        if(!button.isEmpty()){
+                        if(button != null && !button.isEmpty()){
                           snackbar.setAction(button, new View.OnClickListener() {
                               @Override
                               public void onClick(View view) {
@@ -60,6 +65,9 @@ public class MaterialSnackbar extends CordovaPlugin {
                     }
                 });
                 return true;
+            } else if ("closeMaterialSnackbar".equals(action)) {
+                snackbar.dismiss();
+                callbackContext.success();
             }
             return false;
         } catch(Exception e) {
