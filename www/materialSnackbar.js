@@ -8,7 +8,7 @@ var snackbar = {
             [{                  // and this array of custom arguments to create our entry
                 "text": text,
                 "duration": duration,
-                "button": button || null
+                "button": button || ''
             }]
         );
     },
